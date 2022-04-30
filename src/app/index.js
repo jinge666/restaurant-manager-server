@@ -1,10 +1,12 @@
 const Koa = require('koa')
-const bodyParser = require('koa-bodyparser')
+const sslify = require('koa-sslify')
+const bodyParser = require('koa-bodyparser').default
 
 const errorHandle = require('./error-handle')
 const useRouter = require('../router')
 
 const app = new Koa();
+app.use(sslify())  //使用ssl
 
 // json参数解析
 app.use(bodyParser())
