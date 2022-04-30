@@ -13,6 +13,7 @@ const loginController = (ctx,next) => {
     avatarUrl:user.avatarUrl,
     identity:user.identity,
     phone:user.phone,
+    isVip:user.is_vip,
     token
   }
 }

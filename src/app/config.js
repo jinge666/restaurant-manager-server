@@ -4,12 +4,13 @@ const path = require('path')
 
 dotenv.config();
 
-const PRIVATE_KEY = fs.readFileSync(path.resolve(__dirname,'./key/private.key'))
-const PUBLIC_KEY = fs.readFileSync(path.resolve(__dirname,'./key/public.key'))
+const PRIVATE_KEY = fs.readFileSync(path.resolve(__dirname, './key/private.key'))
+const PUBLIC_KEY = fs.readFileSync(path.resolve(__dirname, './key/public.key'))
 
 // 解构并导出
 module.exports = {
   APP_PORT,
+  APP_PORTS,
   APP_HOST,
   SQL_PORT,
   SQL_DATABASE,

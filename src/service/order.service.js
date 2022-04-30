@@ -111,14 +111,6 @@ class orderService {
   }
   // 获取所有的评论信息
   async getAllComment(limit,offset) {
-    // const statement = 'SELECT ' +
-    //   'JSON_OBJECT("id",o.id,"createTime",o.createAt,"comment",o.comments,"dregg",o.dregg,"pictureList",JSON_ARRAYAGG(pe.url)) commentInfo,' +
-    //   'JSON_OBJECT("avatarUrl",u.avatarUrl,"nickName",u.nickName) userInfo' +
-    // ' FROM `order` o ' +
-    // ' LEFT JOIN picture_evaluation pe ON o.id = pe.order_id' +
-    // ' LEFT JOIN user u ON o.user_id = u.id' +
-    // ' WHERE o.comments IS NOT NULL' +
-    // ' LIMIT ? OFFSET ?'
     const statement = 
       'SELECT' +
         ' JSON_OBJECT("id",o.id,"createTime",o.createAt,"comment",o.comments,"dregg",o.dregg,"pictureList",(' +
