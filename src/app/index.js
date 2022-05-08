@@ -1,6 +1,6 @@
 const Koa = require('koa')
-const sslify = require('koa-sslify')
-const bodyParser = require('koa-bodyparser').default
+const sslify = require('koa-sslify').default
+const bodyParser = require('koa-bodyparser')
 
 const errorHandle = require('./error-handle')
 const useRouter = require('../router')

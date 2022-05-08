@@ -13,17 +13,13 @@ orderRouter.get('/', verifyAuth, getOrder)
 // verifyAuth
 orderRouter.post('/change', changeOrder)
 // 查询订单购物记录shopList
-// verifyAuth
-orderRouter.get('/shopList', getShopList)
+orderRouter.get('/shopList', verifyAuth, getShopList)
 // 商家获取订单
-// verifyAuth
-orderRouter.get('/merchantList', getMerchantList)
+orderRouter.get('/merchantList', verifyAuth, getMerchantList)
 // 给订单创建评论
-// verifyAuth
-orderRouter.post('/comment', createComment)
+orderRouter.post('/comment', verifyAuth, createComment)
 // 获取单条评论信息
-// verifyAuth
-orderRouter.get('/comment', getComment)
+orderRouter.get('/comment', verifyAuth, getComment)
 // 获取所有评论
 orderRouter.get('/allComment', getAllComment)
 

@@ -4,6 +4,7 @@ const NAME_IS_NOT_EXISTS = 'name_is_not_exists'
 const PASSWORD_IS_ERROR = 'password_is_error'
 const UNAUTHORIZATION = 'unauthorization'
 const UNPERMISSION = 'unpermissin'
+const NOTLOGIN = 'not_login'
 
 
 module.exports = {
@@ -12,5 +13,6 @@ module.exports = {
   NAME_IS_NOT_EXISTS,
   PASSWORD_IS_ERROR,
   UNAUTHORIZATION,
-  UNPERMISSION
+  UNPERMISSION,
+  NOTLOGIN
 }

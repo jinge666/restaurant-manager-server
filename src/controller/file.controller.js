@@ -11,12 +11,13 @@ class fileController {
     // 2.将所有的文件信息保存到数据库中
     const { filename, mimetype, size } = file;
     await fileService.createFile(filename, mimetype, size);
-    let url = `https://${APP_HOST}:${APP_PORTS}/picture/${filename}`
+    let url = `http://${APP_HOST}:${APP_PORT}/picture/${filename}`
     ctx.body = url
   }
   async getFileByName(ctx, next) {
     // 获取文件filename
-    const { filename } = ctx.params
+    let { filename } = ctx.params
+    filename = filename.split('.')[0]
     const fileDetail = await fileService.getFileInfoByFilename(filename)
     ctx.response.set('content-type', fileDetail.mimetype)
     ctx.body = fs.createReadStream(`${PICTURE_PATH}/${fileDetail.filename}`)

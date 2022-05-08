@@ -1,7 +1,7 @@
 const errorTypes = require('../constants/error-types')
 
-const errorHandle =  (error,ctx) => {
-  let status , message
+const errorHandle = (error, ctx) => {
+  let status, message
   switch (error.message) {
     case errorTypes.NAME_OR_PASSWORD_IS_REQUIRED:
       status = 400
@@ -22,6 +22,10 @@ const errorHandle =  (error,ctx) => {
     case errorTypes.UNAUTHORIZATION:
       status = 401
       message = 'token失效~'
+      break
+    case errorTypes.NOTLOGIN:
+      status = 401
+      message = '请验证登录信息~'
       break
     case errorTypes.UNPERMISSION:
       status = 401
