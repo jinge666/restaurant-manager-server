@@ -11,3 +11,9 @@
 #### 启动命令：npm run start
 
 # 路过的大佬给个小星星
+
+### 微信小程序端：
+
+github：[点击这里](https://github.com/jinge666/restaurant-manager)
+
+gitee：[点击这里](https://gitee.com/jin-wending/restaurant-manager)
